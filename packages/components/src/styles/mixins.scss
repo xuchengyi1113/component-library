@@ -1,0 +1,37 @@
+
+$namespace: 'my';
+
+/* Block: 生成 .my-xxx */
+@mixin b($block) {
+  $B: $namespace + '-' + $block !global;
+  .#{$B} {
+    @content;
+  }
+}
+
+/* Modifier: 生成 .my-xxx--yyy */
+@mixin m($modifier) {
+  @at-root {
+    #{&}--#{$modifier} {
+      @content;
+    }
+  }
+}
+
+/* Element: 生成 .my-xxx__yyy */
+@mixin e($element) {
+  @at-root {
+    #{&}__#{$element} {
+      @content;
+    }
+  }
+}
+
+/* State: 生成 .is-xxx */
+@mixin when($state) {
+  @at-root {
+    &.is-#{$state} {
+      @content;
+    }
+  }
+}
