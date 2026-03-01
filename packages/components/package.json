@@ -2,12 +2,31 @@
   "name": "@my-ui/components",
   "version": "1.0.0",
   "description": "",
-  "main": "index.ts",
+  "main": "dist/my-ui-components.umd.js",
+  "module": "dist/my-ui-components.es.js",
+  "types": "dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/my-ui-components.es.js",
+      "require": "./dist/my-ui-components.umd.js"
+    },
+    "./dist/index.css": "./dist/index.css"
+  },
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "vite build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "packageManager": "pnpm@10.30.1"
+  "packageManager": "pnpm@10.30.1",
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.4",
+    "vite": "^7.3.1",
+    "vite-plugin-dts": "^4.5.4"
+  }
 }

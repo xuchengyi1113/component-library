@@ -33,7 +33,7 @@ const ns = useNamespace('btn');
 </script>
 
 <style scoped lang="scss">
-@import './styles/mixins.scss';
+@use './styles/mixins.scss' as *;
 
 /* 使用 mixin 自动生成 .my-btn */
 @include b(btn) {

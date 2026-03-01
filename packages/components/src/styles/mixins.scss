@@ -1,5 +1,6 @@
 
 $namespace: 'my';
+$B: null;
 
 /* Block: 生成 .my-xxx */
 @mixin b($block) {

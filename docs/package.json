@@ -1,0 +1,22 @@
+{
+  "name": "@my-ui/docs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.30.1",
+  "dependencies": {
+    "vue": "^3.x.x",
+    "@my-ui/components": "workspace:*"
+  },
+  "devDependencies": {
+    "vitepress": "^1.0.0-rc.31",
+    "vitepress-theme-demoblock": "^3.1.3"
+  }
+}
